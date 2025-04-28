@@ -2,17 +2,17 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 import {Link} from 'react-router-dom'
-import { addRental } from "../store/rentalSlice";
+import { addRental, deleteRental } from "../store/rentalSlice";
 
 
 
 function RentalList(){
     const rentals = useSelector(state => state.rentals.rentals)
     const dispatch = useDispatch();
-    useEffect(()=>{
-        
-
-    },[dispatch])
+    
+    function handleDelete(id){
+        dispatch(deleteRental(id))
+    }
     return(
         <div>
             <h2>
@@ -27,7 +27,9 @@ function RentalList(){
                         {rentals.map((rental)=> (
                             <li key={rental.id}>
                                 {rental.customer}- {rental.carType} - { rental.rentalDays} days
-                                <Link to={`/edit/${rental.id}`}>Edit</Link>
+                                <button onClick={()=>
+                                    handleDelete(rental.id)
+                                }>Delete</button>
                             </li>
                         ))}
                     </ul>

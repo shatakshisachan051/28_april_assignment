@@ -1,9 +1,9 @@
 import { configureStore } from '@reduxjs/toolkit'
-import { rentalSlice } from './rentalSlice'
+import  rentalsReducer  from './rentalSlice'
 
 const store = configureStore({
   reducer: {
-    rentals: rentalSlice,
+    rentals: rentalsReducer,
     
   },
 })

@@ -10,9 +10,9 @@ function fineCalculator(rentals){
     let totalFineForAll=0
 
     rentals.forEach( rents=>{
-        let perDayFine=0
+       // let perDayFine=0
 
-        perDayFine = fineforCar[rents.carType]
+        let perDayFine = fineforCar[rents.carType]
         let fine = perDayFine * (rents.daysLate)
 
         if(rents.isFrequentCustomer){

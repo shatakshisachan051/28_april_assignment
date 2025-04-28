@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux';
 import { addRental } from '../store/rentalSlice';
+import { Link } from 'react-router-dom';
 
 
 function AddRental() {

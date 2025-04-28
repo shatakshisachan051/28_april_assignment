@@ -1,0 +1,22 @@
+Problem 1: Car Rental Late Fee Calculator
+Implement a function to calculate fines for returning rental cars late.
+
+Input:
+
+Rentals: [
+  { customer: "Raj", daysLate: 2, carType: "SUV", isFrequentCustomer: true },
+  { customer: "Ananya", daysLate: 5, carType: "Sedan", isFrequentCustomer: false },
+  { customer: "Kabir", daysLate: 0, carType: "Hatchback", isFrequentCustomer: false }
+]
+
+Fine Rules:
+- ₹500/day for SUV
+- ₹300/day for Sedan
+- ₹200/day for Hatchback
+- 20% discount for Frequent Customers
+- Fine cap ₹5000
+
+Expected Output:
+
+Original fine: ₹2600
+Final fine after discount: ₹2200

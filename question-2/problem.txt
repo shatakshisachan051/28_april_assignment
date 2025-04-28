@@ -1,0 +1,19 @@
+Problem 2: Car Rental Management App
+Build a car rental management system:
+
+Routing:
+/ → Rental List (Search & Filter by car type)
+/rent → Add Rental form
+/edit/:id → Edit Rental
+/summary → Rental Summary
+Forms:
+Capture customer name, car type, rental days.
+State Management:
+Use Redux Toolkit for rentals state.
+Conditional Rendering:
+Show "No Rentals" message if empty.
+useMemo:
+Memoize total income, rentals per car type.
+Additional:
+Search by customer name.
+Sort by rental days.

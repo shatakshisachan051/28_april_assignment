@@ -20,14 +20,15 @@ function fineCalculator(rentals){
         }
 
         totalFineForAll = totalFineForAll+fine
+        if(totalFineForAll >5000){
+            totalFineForAll=5000
+        }
 
 
     })
 
     
-        if(totalFineForAll >5000){
-            totalFineForAll=5000
-        }
+        
 
         return totalFineForAll;
 }

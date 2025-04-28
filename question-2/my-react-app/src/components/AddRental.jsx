@@ -13,7 +13,7 @@ function AddRental() {
         e.preventDefault()
 
         let rental ={
-            id=Date.now(),
+            id:Date.now(),
             customer,
             carType,
             rentalDays:parseInt(rentalDays)
@@ -31,11 +31,11 @@ function AddRental() {
   return (
     <div>
         <h1>ADD Rental</h1>
-        <form >
-            <input type="text" name="customer" onChange={(e)=> setCustomer(e.target.value) } placeholder='Customer Name...' />
-            <input type="text" name="carType" onChange={(e)=> setCarType(e.target.value) } placeholder='Car Type...' />
-            <input type="number" name='rentalDays' onChange={(e)=> setRentalDays (e.target.value) }placeholder='renttal days...' />
-            <button onClick={()=>handleSumbit(e)} type='submit'> Add</button>
+        <form onSubmit={handleSumbit} >
+            <input type="text" name="customer" value={customer} onChange={(e)=> setCustomer(e.target.value) } placeholder='Customer Name...' />
+            <input type="text" name="carType" value={carType} onChange={(e)=> setCarType(e.target.value) } placeholder='Car Type...' />
+            <input type="number" name='rentalDays' value={rentalDays} onChange={(e)=> setRentalDays (e.target.value) }placeholder='renttal days...' />
+            <button  type='submit'> Add</button>
             
         </form>
 

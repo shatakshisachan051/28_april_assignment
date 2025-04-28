@@ -19,10 +19,12 @@ function fineCalculator(rentals){
             fine= fine- (fine*(20/100))
         }
 
-        totalFineForAll = totalFineForAll+fine
-        if(totalFineForAll >5000){
-            totalFineForAll=5000
+        if(fine >5000){
+            fine=5000;
         }
+
+        totalFineForAll = totalFineForAll+fine
+        
 
 
     })
